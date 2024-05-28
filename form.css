@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+
+body{
+    color:white;
+    font-weight: bold;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.2)),url('https://wallpapercave.com/wp/wp3396341.jpg');
+    background-size:100% 100%;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+}
+.container{
+    background-color:rgba(0, 0, 0, 0.61);
+    max-width:700px;
+    width:100%;
+    position:relative;
+    border-radius:6px;
+    padding:30px;
+    margin: 20px 20px 20px 20px;    
+
+    
+    box-shadow:0 2px 10px white;
+}
+.container header{
+    position: relative;
+    font-size:40px;
+    font-weight:900;
+    color:white;
+    overflow:auto;
+        
+}
+.line {
+    padding-bottom: 6px;
+    border-bottom-style: solid;
+    border-bottom-width: 2.1px;
+    width: fit-content;
+    border-color:aquamarine;
+}
+
+.container form{
+    position:relative;
+    min-height:430px;
+    margin-top:16px;
+    background-color:rgba(0, 0, 0, 0.438);
+}
+.container form .details{
+    margin-top:40px;
+
+
+}
+.container form .title{
+    display:block;
+    margin-top:16px;
+    font-size:25px;
+    font-weight:500px;
+    margin-bottom:6px 0;
+}
+.container form .fields{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+
+}
+form .fields .input-field{
+    display:flex;
+    width:calc(100% / 2 - 15px);
+    color:white;
+    flex-direction: column;
+    margin:8px 0;
+}
+.input-field label{
+ font-size:15px;
+ font-weight:700;
+
+}
+.input-field input{
+    outline:none;
+    font-size:14px;
+    border:1px solid aquamarine;
+    font-weight:400;
+    padding:15px;
+    height:20px;
+    margin:8px 0;
+
+}
+.input-field input:is(:focus,:valid){
+    box-shadow:0  2px aquamarine;
+}
+.container form button{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:45px;
+    max-width:200px;
+    width:100%;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    margin:25px 0;
+    color:black;
+    background-color: aquamarine;
+    transition: all 0.3s linear;
+    cursor:pointer;
+    font-weight:600;
+    font-size:16px;
+
+}
+form button:hover{
+    background-color:darkgrey;
+    color:black;
+}
+form button i{
+    margin:0 6px;
+    font-size:20px;
+}
+/* CSS for alert messages */
+.alert {
+    position:absolute;
+    padding: 20px;
+    top:100px;
+    left:50%;
+    border-radius: 5px;
+    box-shadow:0  2px aquamarine;
+    display:flex;
+    flex-direction: column;
+
+
+}
+/* CSS for the OK button */
+.alert button {
+    background-color: aquamarine; /* Green */
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hover effect */
+.alert button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.success {
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    background:white; /* Specify the path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center;
+    background-color: #d4edda;
+    color: #155724;
+    text-align:center;
+    justify-content:center;
+
+}
+
+.warning {
+    background-color:white;
+    color: #721c24;
+}
+.login{
+    padding:30px;
+
+    
+}
+a{
+    text-decoration:none;
+    color:white;
+    font-size:20px;
+    border:1px solid black;
+    padding:10px;
+    
+}
+a:hover{
+    background:aquamarine;
+    color:black;   
+     
+}
+.home {
+    display:flex;
+    gap:20px;
+    justify-content: center;
+}
+.container form .home button{
+    background-color:rgba(127, 255, 212, 0.187);
+    color:white;
+
+}
+.container form .home button:hover{
+    background-color:aquamarine;
+    color:black;
+}
+
+
+
+
+

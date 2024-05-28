@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <link rel="stylesheet" href="form.css">
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        
+        <title>login and registration form</title>
+
+    </head>
+    <body>
+        <div class="container">
+            <header><div class="line">Registration</div></header>
+            <form id="registrationForm" action="#">
+                <div class="first">
+                    <div class="details personal">
+                        <span class="title line">Fill The Details</span>
+                        <div class="fields">
+                            <div class="input-field ">
+                                <label>Set Username</label>
+                                <input type="text" id="username" placeholder="Set the username" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Confirm Username</label>
+                                <input type="text" id="confirmUsername" placeholder="Repeat the username" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>First Name</label>
+                                <input type="text" id="firstName" placeholder="Enter Your first Name" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Last Name</label>
+                                <input type="text" id="lastName" placeholder="Enter Your last Name" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Phone no</label>
+                                <input type="text" id="phoneNo" placeholder="Enter Your phone no" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Identity Proof</label>
+                                <input type="text" id="aadharNo" placeholder="Enter Your aadhar no" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Password</label>
+                                <input type="password" id="password" placeholder="Set the password" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Confirm Password</label>
+                                <input type="password" id="confirmPassword" placeholder="Repeat the password" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Email Id</label>
+                                <input type="email" id="email" placeholder="enter your email" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Email Password</label>
+                                <input type="password" id="epass" placeholder="enter your email password" required>
+                            </div>
+    
+                            <button type="button" class="newBtn" onclick="validateForm()">
+                                <span class="btnText">Submit</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+                            <div class="login"><p>if you already have account then <a href="sample.html">login</a></p></div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="home">
+                <button type="button" onclick="window.location.href='task1.html'">
+                    <span class="btnText">Home</span>
+                    <i class="uil uil-home"></i>
+                </button>
+                <button type="button" >
+                    <span class="btnText" onclick="window.location.href='guidelines_reg.html'">Guidelines</span>
+                    <i class="uil uil-search"></i>
+                </button>
+            </div>
+            </form>
+        </div>
+    
+        <script>
+    function showAlert(message, type) {
+    var alertElement = document.createElement('div');
+    alertElement.textContent = message;
+    alertElement.classList.add('alert', type); // Add alert class and type-specific class
+    var okButton = document.createElement('button');
+    okButton.textContent = 'OK';
+    okButton.addEventListener('click', function() {
+        alertElement.remove();
+    });
+    alertElement.appendChild(okButton);
+
+    document.body.appendChild(alertElement);
+
+    // Remove the alert after 3 seconds
+    setTimeout(function() {
+        alertElement.remove();
+    }, 8000);
+}
+    function validateForm() {
+
+        function escapeHtml(input) {
+    if (!input) return input; // If input is empty or undefined, return it as is
+    return input
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+
+var usernameInput = document.getElementById('username').value;
+var confirmUsernameInput = document.getElementById('confirmUsername').value;
+var passwordInput = document.getElementById('password').value;
+var confirmPasswordInput = document.getElementById('confirmPassword').value;
+var phnoInput = document.getElementById('phoneNo').value;
+var firstNameInput = document.getElementById('firstName').value;
+var lastNameInput = document.getElementById('lastName').value;
+var aadharNoInput = document.getElementById('aadharNo').value;
+var emailInput = document.getElementById('email').value;
+var epassInput = document.getElementById('epass').value;
+
+
+
+// Escape user inputs
+var usernameEscaped = escapeHtml(usernameInput);
+var confirmUsernameEscaped = escapeHtml(confirmUsernameInput);
+var passwordEscaped = escapeHtml(passwordInput);
+var confirmPasswordEscaped = escapeHtml(confirmPasswordInput);
+var phnoEscaped = escapeHtml(phnoInput);
+var firstNameEscaped = escapeHtml(firstNameInput);
+var lastNameEscaped = escapeHtml(lastNameInput);
+var aadharNoEscaped = escapeHtml(aadharNoInput);
+var emailEscaped = escapeHtml(emailInput);
+var epassEscaped = escapeHtml(epassInput);
+
+// Sanitize escaped inputs using DOMPurify
+var username = DOMPurify.sanitize(usernameEscaped);
+var confirmUsername = DOMPurify.sanitize(confirmUsernameEscaped);
+var password = DOMPurify.sanitize(passwordEscaped);
+var confirmPassword = DOMPurify.sanitize(confirmPasswordEscaped);
+var phno = DOMPurify.sanitize(phnoEscaped);
+var firstName = DOMPurify.sanitize(firstNameEscaped);
+var lastName = DOMPurify.sanitize(lastNameEscaped);
+var aadharNo = DOMPurify.sanitize(aadharNoEscaped);
+var email = DOMPurify.sanitize(emailEscaped);
+var epass= DOMPurify.sanitize(epassEscaped);
+
+
+
+                // Check if any field is empty
+                if (username.trim() === '' || confirmUsername.trim() === '' || 
+                    password.trim() === '' || confirmPassword.trim() === '' || phno.trim() === '' || email.trim() === '' || epass.trim() === '' ) {
+                        showAlert('Please fill out all the fields','warning');
+                    return;
+                }
+                
+                var pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@])[a-zA-Z0-9@]+$/;
+               // Check if username matches the pattern
+               if (!username.match(pattern) || username.length<5) {
+                showAlert('Username should contain letters, digits, small letters, capital letters, and "@" symbol and length also not less than 5','warning');
+               return;
+               }
+              
+
+               var check = /^[a-zA-Z]+$/;
+               if (!firstName.match(check)) {
+                showAlert('First name should contain only letters,uppercase or lowercase','warning');
+               return;
+               }
+               if (!lastName.match(check)) {
+                showAlert('last name should contain only letters,uppercase or lowercase','warning');
+               return;
+               }
+              
+                // Check if username and confirm username match
+                if (username !== confirmUsername) {
+                    showAlert('Username and confirm username do not match','warning');
+                    return;
+                }
+                var digits = /^\+\d+$/;
+                if (!phno.match(digits) || phno.length<12) {
+                    showAlert('enter number with your country code ex:+91','warning');
+               return;
+               }
+               var odigits = /^\d+$/;
+               if (!aadharNo.match(odigits)) {
+                showAlert('enter 12 digit aadhar no','warning', false, true);
+               return;
+               }
+               
+               if (!password.match(pattern) || password.length<7) {
+                showAlert('set strong password once read guidelines','warning');
+               return;
+               }
+                // Check if password and confirm password match
+                if (password !== confirmPassword) {
+                    showAlert('Password and confirm password not matching','warning');
+                    return;
+                }
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.match(emailRegex) ) {
+                showAlert('invalid email format','warning');
+               return;
+               }
+    
+                // If all validation passes, you can submit the form or proceed to the next step
+               showAlert('Form submitted successfully', 'success');
+
+                // Add code to submit form or proceed to the next step
+            }
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
+
+        
+    </body>
+</html>

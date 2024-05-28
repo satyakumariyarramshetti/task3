@@ -1,0 +1,124 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Outfit';
+    
+    background:linear-gradient(bisque,teal,white);
+    
+}
+.contact-container{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+
+
+}
+.contact-left{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    gap:20px;
+
+
+}
+.contact-left-title
+{
+font-weight:800;
+color:black;
+font-size:40px;
+margin-bottom:5px;
+
+}
+.contact-left-title hr{
+    border:none;
+    width:120px;
+    height:5px;
+    background-color:blue;
+    border-radius:10px;
+    margin-bottom:20px;
+
+ }
+ .contact-inputs{
+    width:400px;
+    height:50px;
+    border:none;
+    outline:none;
+    padding-left:25px;
+    font-weight:500;
+    color:black;
+    border-radius:50px;
+ }
+.contact-left textarea{
+    height:140px;
+    padding-top:15px;
+    border-radius:20px;
+
+}
+.contact-inputs:focus{
+    border:2px solid red;
+}
+.contact-inputs::placeholder{
+    color:black;
+    font-weight:600;
+    
+}
+.contact-left button{
+    display:flex;
+    align-items:center;
+    padding:15px 30px;
+    font-size: 16px;
+    color:white;
+    gap:10px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(blue,black);
+    cursor:pointer;
+
+}
+.contact-left button:hover{
+    background:black;
+    color:white;
+}
+.contact-right img{
+display:block;
+width:250px;
+height:250px;}
+.contact-right img:hover{
+    transform: scale(1.1); /* Increase size on hover */
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+.contact-right:hover img {
+    animation: shake 0.5s ease-in-out;
+}
+
+@media(max-width:412px){
+    .contact-inputs{
+        width:80vw;
+    }
+    .contact-right{
+        display:none;
+    }
+}
+a{
+    text-decoration:none;
+    padding:0px;
+    color:black;
+    font-weight:600;
+
+}
+a:hover{
+    background:black;
+    color:white;
+}

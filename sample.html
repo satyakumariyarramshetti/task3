@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sample.css">
+            <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-form">
+        <div class="form-title">
+            Member Login
+        </div>
+        <div class="form-input">
+            <label for="username"> UserName</label>
+            <input type="text" id="username">
+        </div>
+        <div class="form-input">
+            <label for="password"> Password</label>
+            <input type="password" id="password">
+        </div>
+        <div class="captcha">
+            <label for="captcha-input">Enter the Captcha</label>
+            <div class="preview"></div>
+            <div class="captcha-form">
+                <input type="text" id="captcha-form" placeholder="Enter The Captcha">
+            <button class="captcha-refresh">
+                <i class="fa fa-refresh"></i>
+            </button>
+        </div>
+    
+        </div>
+        <div class="for-input">
+            <button id="login-btn">Login</button>
+        </div>
+        <div class="register">
+            <p>if you dont have account??&emsp;<a href="form.html">register</a></p>
+        </div>
+        <div class="home">
+            <button type="button" onclick="window.location.href='task1.html'">
+                <span class="btnText">Home</span>
+                <i class="uil uil-home"></i>
+            </button>
+            <button type="button" >
+                <span class="btnText">Guidelines</span>
+                <i class="uil uil-search"></i>
+            </button></div>
+        
+    </div>
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    
+    <script src="sample.js"></script>
+
+</body>
+</html>

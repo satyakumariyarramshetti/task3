@@ -1,0 +1,184 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body{
+  background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.2)),url('https://wallpapercave.com/wp/wp3396341.jpg');
+  background-size:100% 100%;
+  background-position:center;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+}
+.login-form{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    max-width:450px;
+    transform:translate(-49%,-50%);
+    background:rgba(0, 0, 0, 0.655);
+    padding:20px 30px;
+    box-shadow: 0px 5px 10px white;
+}
+.login-form .form-title{
+    color:white;
+    text-align:center;
+    font-size:30px;
+    font-weight:600;
+    margin:20px 0px 30px;
+   }
+   .login-form .form-input{
+    margin:10px 0px;
+    
+   }
+   .login-form .form-input label,
+   .login-form .captcha label{
+       display:block;
+       font-size:15px;
+       color:white;
+       font-weight:600;
+       margin-bottom:5px;
+   }
+  .login-form .form-input input{
+    width:100%;
+    padding:10px;
+    border:1px solid aquamarine;
+    font-size:15px;
+  }
+  .login-form .captcha{
+    margin:15px 0px;
+
+  }
+  .login-form .captcha .preview{
+    color:white;
+    width:100%;
+    text-align:center;
+    height:40px;
+    line-height:40px;
+    letter-spacing:8px;
+    border:1px solid aquamarine;
+    font-family:"monospace";
+  }
+  .login-form .captcha .preview span{
+    display:inline-block;
+    user-select:none;
+
+  }
+  .login-form .captcha .captcha-form{
+    display:flex;
+
+  }
+  .login-form .captcha .captcha-form input{
+    width:100%;
+    padding:8px;
+    border:1px solid black;
+
+  }
+  .login-form .captcha .captcha-form .captcha-refresh{
+    width:42px;
+    border:none;
+    outline:none;
+    background:#888;
+    color:#eee;
+    cursor:pointer;
+  }
+  .login-form #login-btn{
+    margin-top:5px;
+    width:100%;
+    padding:10px;
+    border:none;
+    outline:none;
+    font-size:15px;
+    text-transform:uppercase;
+    background:darkslategray;
+    color:white;
+    cursor:pointer;
+  }
+  /* Styles for the modal */
+.modal {
+    
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 30%;
+    height: 50%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.register{
+  color:white;
+  font-weight:600;
+  margin-top:20px;
+  margin-left:10px;
+
+
+}
+a{
+  font-size:20px;
+  text-decoration:none;
+  color:white;
+  border:1px solid black;
+  padding:10px;
+
+}
+a:hover{
+  background: aquamarine;
+  color:black;
+  border:1px solid black;
+
+}
+.home button{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  height:45px;
+  max-width:200px;
+  width:100%;
+  border:none;
+  outline:none;
+  border-radius:10px;
+  margin:25px 0;
+  color:white;
+  background-color: rgba(127, 255, 212, 0.187);;
+  transition: all 0.3s linear;
+  cursor:pointer;
+  font-weight:600;
+  font-size:16px;
+
+}
+ button:hover{
+  background-color:darkgrey;
+  color:black;
+}
+form button i{
+  margin:0 6px;
+  font-size:20px;
+}
+.home {
+  display:flex;
+  gap:20px;
+  justify-content: center;
+}

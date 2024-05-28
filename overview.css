@@ -1,0 +1,89 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Outfit';
+    background:linear-gradient(black,grey,black);
+    
+}
+.contact-container{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+
+
+}
+.contact-left{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    gap:20px;
+
+
+}
+.contact-left-title
+{
+font-weight:800;
+color:black;
+font-size:40px;
+margin-bottom:5px;
+
+}
+.contact-left-title hr{
+    border:none;
+    width:120px;
+    height:5px;
+    background-color:blue;
+    border-radius:10px;
+    margin-bottom:20px;
+
+ }
+  /* CSS styles for audio player */
+  .audio-player {
+    margin: 20px;
+}
+.contact-right img{
+display:block;
+width:250px;
+height:250px;}
+.contact-right img:hover{
+    transform: scale(1.1); /* Increase size on hover */
+}
+
+
+
+h2{
+    margin:20px;
+    color:white;
+    font-weight:600;
+}
+.audio-player {
+    position: relative;
+    display: inline-block;
+}
+
+.audio-player audio {
+    display: block;
+    width: 300px; /* Adjust as needed */
+    transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+
+audio:hover{
+    transform:scale(1.1);
+}
+@media(max-width:412px){
+    .contact-inputs{
+        width:80vw;
+    }
+    .contact-right{
+        display:none;
+    }
+}
+h2:hover{
+    transform:scale(1.2);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
